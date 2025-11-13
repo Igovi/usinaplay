@@ -27,6 +27,7 @@
     "@capacitor/keyboard": "7.0.3",
     "@capacitor/status-bar": "7.0.3",
     "@ionic/angular": "^8.0.0",
+    "bootstrap": "^5.3.8",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -60,5 +61,5 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.8.0"
   },
-  "description": "An Ionic project"
+  "description": "Usina Play - App de treino e fitness"
 }
