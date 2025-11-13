@@ -78,4 +78,15 @@ export class HomePage {
   onCardClick(card: Card): void {
     console.log('Card clicado:', card);
   }
+
+  contentCards: Card[] = [
+    {
+      id: 1,
+      image: ''
+    },
+    {
+      id: 2,
+      image: ''
+    }
+  ];
 }

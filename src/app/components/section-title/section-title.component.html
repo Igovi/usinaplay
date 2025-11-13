@@ -1,4 +1,4 @@
-<div class="section-title">
+<div class="section-title" [class.section-title--disabled]="disabled">
   <h2 class="section-title__text">
     {{ title }}<span *ngIf="badgeText" class="section-title__badge">{{ badgeText }}</span>
   </h2>

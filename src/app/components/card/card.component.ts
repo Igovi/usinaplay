@@ -14,6 +14,7 @@ export class CardComponent {
   @Input() buttonIcon = 'add';
   @Input() isAddCard = false;
   @Input() focus = true;
+  @Input() isContentCard = false;
   @Output() cardClick = new EventEmitter<void>();
   @Output() buttonClick = new EventEmitter<void>();
 

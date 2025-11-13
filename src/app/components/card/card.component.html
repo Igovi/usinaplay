@@ -1,5 +1,5 @@
 <div class="card" (click)="onCardClick()">
-  <div class="card__image-container">
+  <div class="card__image-container" [class.card__image-container--content]="isContentCard">
     <img 
       *ngIf="image" 
       [src]="image" 
@@ -21,6 +21,7 @@
       <span class="card__button-text">{{ buttonText }}</span>
     </button>
     <div *ngIf="title && !buttonText" class="card__title-overlay">{{ title }}</div>
+    <div *ngIf="isContentCard && isAddCard" class="card__content-box"></div>
   </div>
 </div>
 

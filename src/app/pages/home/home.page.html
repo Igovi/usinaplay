@@ -62,6 +62,23 @@
           ></app-card>
         </div>
       </div>
+
+      <div class="home-section home-section--disabled">
+        <app-section-title 
+          [title]="'CONTEÚDOS'" 
+          [disabled]="true"
+        ></app-section-title>
+        <div class="home-section__cards">
+          <app-card
+            *ngFor="let card of contentCards; let i = index"
+            [image]="card.image"
+            [isContentCard]="true"
+            [isAddCard]="i === 0"
+            [focus]="false"
+            (cardClick)="onCardClick(card)"
+          ></app-card>
+        </div>
+      </div>
     </div>
   </div>
 </ion-content>

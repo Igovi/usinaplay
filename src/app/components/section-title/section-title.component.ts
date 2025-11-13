@@ -10,6 +10,7 @@ export class SectionTitleComponent {
   @Input() title = '';
   @Input() badgeText = '';
   @Input() showAddButton = false;
+  @Input() disabled = false;
   @Output() addClick = new EventEmitter<void>();
 
   onAddClick() {
