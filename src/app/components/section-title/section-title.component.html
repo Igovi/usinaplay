@@ -1,6 +1,7 @@
 <div class="section-title">
-  <h2 class="section-title__text">{{ title }}</h2>
-  <span *ngIf="badgeText" class="section-title__badge">{{ badgeText }}</span>
+  <h2 class="section-title__text">
+    {{ title }}<span *ngIf="badgeText" class="section-title__badge">{{ badgeText }}</span>
+  </h2>
   <button 
     *ngIf="showAddButton" 
     class="section-title__add-button" 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PersonalCard } from '../../models/personal-card.interface';
+import { Card } from '../../models/card.interface';
 import { User } from '../../models/user.interface';
 
 @Component({
@@ -16,7 +16,7 @@ export class HomePage {
     userImage: 'assets/images/perfilImage.jpg'
   };
 
-  personalCards: PersonalCard[] = [
+  personalCards: Card[] = [
     {
       id: 1,
       image: 'assets/images/personalTrainer.png',
@@ -26,15 +26,18 @@ export class HomePage {
     },
     {
       id: 2,
-      image: 'assets/images/personalTrainer.png'
+      image: 'assets/images/personalTrainer.png',
+      title: 'YOGA EXPRESS'
     },
     {
       id: 3,
-      image: 'assets/images/personalTrainer.png'
+      image: 'assets/images/personalTrainer.png',
+      title: 'TREINO 2'
     },
     {
       id: 4,
-      image: 'assets/images/personalTrainer.png'
+      image: 'assets/images/personalTrainer.png',
+      title: 'TREINO 3'
     }
   ];
 
@@ -53,7 +56,26 @@ export class HomePage {
     console.log('Botão adicionar novo treino clicado');
   }
 
-  onCardClick(card: PersonalCard): void {
+  programCards: Card[] = [
+    {
+      id: 1,
+      image: 'assets/images/PesoImage.png',
+      overlayText: 'continuar treinando',
+      title: 'LEVANTAMENTO DE PESO'
+    },
+    {
+      id: 2,
+      image: 'assets/images/PesoImage.png',
+      title: 'YOGA EXPRESS'
+    },
+    {
+      id: 3,
+      image: 'assets/images/PesoImage.png',
+      title: 'CROSSFIT'
+    }
+  ];
+
+  onCardClick(card: Card): void {
     console.log('Card clicado:', card);
   }
 }

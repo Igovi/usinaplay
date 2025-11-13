@@ -37,9 +37,27 @@
             [image]="card.image"
             [buttonText]="card.buttonText || ''"
             [buttonIcon]="card.buttonIcon || ''"
+            [title]="card.title || ''"
             [isAddCard]="card.isAddCard || false"
             [focus]="false"
             (buttonClick)="onAddCardButtonClick()"
+            (cardClick)="onCardClick(card)"
+          ></app-card>
+        </div>
+      </div>
+
+      <div class="home-section">
+        <app-section-title 
+          [title]="'PROGRAMAS'" 
+          [badgeText]="'NOVO'"
+        ></app-section-title>
+        <div class="home-section__cards">
+          <app-card
+            *ngFor="let card of programCards"
+            [image]="card.image"
+            [overlayText]="card.overlayText || ''"
+            [title]="card.title || ''"
+            [focus]="true"
             (cardClick)="onCardClick(card)"
           ></app-card>
         </div>
