@@ -1,0 +1,147 @@
+ion-menu {
+  --width: 280px;
+  --background: #202020;
+}
+
+ion-menu ion-header {
+  ion-toolbar {
+    --background: #202020;
+    --border-width: 0;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    --padding-start: 20px;
+    --padding-end: 12px;
+    --min-height: 80px;
+  }
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.menu-logo {
+  height: 36px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.menu-close-button {
+  --color: #ffffff;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  margin: 0;
+  
+  ion-icon {
+    font-size: 28px;
+    color: #ffffff;
+    transition: color 0.2s ease;
+  }
+  
+  &:hover {
+    --color: #FF6B35;
+    ion-icon {
+      color: #FF6B35;
+    }
+  }
+}
+
+ion-menu ion-content {
+  --background: #202020;
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+.menu-content {
+  padding: 8px 0;
+}
+
+.menu-list {
+  background: transparent;
+  padding: 0;
+}
+
+.menu-item {
+  --background: transparent;
+  --background-hover: rgba(255, 107, 53, 0.1);
+  --background-activated: rgba(255, 107, 53, 0.15);
+  --color: #ffffff;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --min-height: 56px;
+  margin: 4px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: #FF6B35;
+    border-radius: 0 2px 2px 0;
+    transition: height 0.2s ease;
+  }
+  
+  &:hover,
+  &.ion-activated {
+    --background: rgba(255, 107, 53, 0.1);
+    
+    &::before {
+      height: 60%;
+    }
+    
+    ion-icon {
+      color: #FF6B35;
+    }
+  }
+  
+  ion-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 12px 0;
+    transition: color 0.2s ease;
+  }
+  
+  ion-icon {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    transition: all 0.2s ease;
+  }
+  
+  &:hover,
+  &.ion-activated {
+    ion-label {
+      color: #ffffff;
+    }
+    
+    ion-icon {
+      color: #FF6B35;
+      transform: translateX(4px);
+    }
+  }
+}
+
+ion-menu ion-item::part(native) {
+  border-radius: 8px;
+}
+
+ion-menu ion-item.ion-focused {
+  --background: rgba(255, 107, 53, 0.1);
+}
+
+ion-menu ion-item.ion-activated {
+  --background: rgba(255, 107, 53, 0.15);
+}
+
