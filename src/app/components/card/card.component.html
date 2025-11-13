@@ -1,0 +1,26 @@
+<div class="card" (click)="onCardClick()">
+  <div class="card__image-container">
+    <img 
+      *ngIf="image" 
+      [src]="image" 
+      [alt]="title || 'Card image'" 
+      class="card__image"
+      [class.card__image--unfocused]="!focus"
+    />
+    <div *ngIf="overlayText" class="card__overlay-text">{{ overlayText }}</div>
+    <button 
+      *ngIf="buttonText" 
+      class="card__button"
+      type="button"
+      (click)="onButtonClick($event)"
+      [attr.aria-label]="buttonText"
+    >
+      <div class="card__button-icon-container">
+        <ion-icon [name]="buttonIcon" class="card__button-icon"></ion-icon>
+      </div>
+      <span class="card__button-text">{{ buttonText }}</span>
+    </button>
+    <div *ngIf="title && !buttonText" class="card__title-overlay">{{ title }}</div>
+  </div>
+</div>
+

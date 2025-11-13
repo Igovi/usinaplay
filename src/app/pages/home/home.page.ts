@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PersonalCard } from '../../models/personal-card.interface';
+import { User } from '../../models/user.interface';
 
 @Component({
   selector: 'app-home',
@@ -7,19 +9,51 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
-  userName: string = 'Leonardo Santos';
-  userLevel: string = 'Nível Roxo';
-  userLevelColor: string = '#6134D0';
-  userImage: string = 'assets/images/perfilImage.jpg';
+  user: User = {
+    userName: 'Leonardo Santos',
+    userLevel: 'Nível Roxo',
+    userLevelColor: '#6134D0',
+    userImage: 'assets/images/perfilImage.jpg'
+  };
+
+  personalCards: PersonalCard[] = [
+    {
+      id: 1,
+      image: 'assets/images/personalTrainer.png',
+      buttonText: 'NOVO\nTREINO',
+      buttonIcon: 'add',
+      isAddCard: true
+    },
+    {
+      id: 2,
+      image: 'assets/images/personalTrainer.png'
+    },
+    {
+      id: 3,
+      image: 'assets/images/personalTrainer.png'
+    },
+    {
+      id: 4,
+      image: 'assets/images/personalTrainer.png'
+    }
+  ];
 
   onActionButtonClick(buttonId: string): void {
     switch (buttonId) {
       case 'my-body':
-        console.log('Navegar para Meu Corpo');
+        console.log('Botão Meu corpo clicado');
         break;
       case 'goals':
-        console.log('Navegar para Objetivos e Conquistas');
+        console.log('Botão Objetivos e conquistas clicado');
         break;
     }
+  }
+
+  onAddCardButtonClick(): void {
+    console.log('Botão adicionar novo treino clicado');
+  }
+
+  onCardClick(card: PersonalCard): void {
+    console.log('Card clicado:', card);
   }
 }

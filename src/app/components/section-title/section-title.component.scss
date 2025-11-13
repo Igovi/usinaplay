@@ -1,0 +1,55 @@
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 40px;
+}
+
+.section-title__text {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.section-title__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background-color: #F07D06;
+  border-radius: 12px;
+  font-size: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.section-title__add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #090909;
+  border: 1.5px solid #F07D06;
+  border-radius: 50%;
+  padding: 0;
+  margin-left: 10px;
+  transition: opacity 0.2s ease;
+}
+
+.section-title__add-button:hover {
+  opacity: 0.8;
+}
+
+.section-title__add-button:active {
+  opacity: 0.6;
+}
+
+.section-title__add-icon {
+  font-size: 12px;
+  color: #F07D06;
+}
+

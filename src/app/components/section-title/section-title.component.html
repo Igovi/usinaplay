@@ -1,0 +1,14 @@
+<div class="section-title">
+  <h2 class="section-title__text">{{ title }}</h2>
+  <span *ngIf="badgeText" class="section-title__badge">{{ badgeText }}</span>
+  <button 
+    *ngIf="showAddButton" 
+    class="section-title__add-button" 
+    type="button" 
+    aria-label="Adicionar"
+    (click)="onAddClick()"
+  >
+    <ion-icon name="add" class="section-title__add-icon"></ion-icon>
+  </button>
+</div>
+

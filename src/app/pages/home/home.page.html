@@ -12,14 +12,36 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-                <app-user-profile
-                  [userName]="userName"
-                  [userLevel]="userLevel"
-                  [userLevelColor]="userLevelColor"
-                  [userImage]="userImage"
-                  (buttonClick)="onActionButtonClick($event)"
-                ></app-user-profile>
+            <app-user-profile
+              [userName]="user.userName"
+              [userLevel]="user.userLevel"
+              [userLevelColor]="user.userLevelColor"
+              [userImage]="user.userImage"
+              (buttonClick)="onActionButtonClick($event)"
+            ></app-user-profile>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-content">
+      <div class="home-section">
+        <app-section-title 
+          [title]="'PERSONAL ONLINE'" 
+          [showAddButton]="true"
+          (addClick)="onAddCardButtonClick()"
+        ></app-section-title>
+        <div class="home-section__cards">
+          <app-card
+            *ngFor="let card of personalCards"
+            [image]="card.image"
+            [buttonText]="card.buttonText || ''"
+            [buttonIcon]="card.buttonIcon || ''"
+            [isAddCard]="card.isAddCard || false"
+            [focus]="false"
+            (buttonClick)="onAddCardButtonClick()"
+            (cardClick)="onCardClick(card)"
+          ></app-card>
         </div>
       </div>
     </div>

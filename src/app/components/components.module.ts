@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './header/header.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { SectionTitleComponent } from './section-title/section-title.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   imports: [
@@ -11,11 +13,15 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   ],
   declarations: [
     HeaderComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SectionTitleComponent,
+    CardComponent
   ],
   exports: [
     HeaderComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SectionTitleComponent,
+    CardComponent
   ]
 })
 export class ComponentsModule { }

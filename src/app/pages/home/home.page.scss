@@ -10,3 +10,41 @@
   padding-bottom: 10px;
   overflow: hidden;
 }
+
+.home-content {
+  padding: 24px 0;
+}
+
+.home-section {
+  margin-bottom: 32px;
+}
+
+.home-section__cards {
+  display: flex;
+  overflow-x: auto;
+  padding-left: 40px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.home-section__cards::-webkit-scrollbar {
+  display: none;
+}
+
+.home-section__cards app-card {
+  width: 280px;
+  min-width: 280px;
+}
+
+.home-section__cards app-card:first-child {
+  margin-left: 0;
+}
+
+.home-section__cards app-card:not(:first-child) {
+  margin-left: 16px;
+}
+
+.home-section__cards app-card:last-child {
+  margin-right: 20px;
+}
