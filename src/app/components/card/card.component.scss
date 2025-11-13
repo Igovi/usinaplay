@@ -57,14 +57,14 @@
   padding: 0;
   z-index: 2;
   transition: opacity 0.2s ease;
-}
 
-.card__button:hover {
-  opacity: 0.9;
-}
+  &:hover {
+    opacity: 0.9;
+  }
 
-.card__button:active {
-  opacity: 0.8;
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .card__button-icon-container {

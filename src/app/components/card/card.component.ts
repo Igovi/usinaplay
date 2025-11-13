@@ -18,7 +18,7 @@ export class CardComponent {
   @Output() cardClick = new EventEmitter<void>();
   @Output() buttonClick = new EventEmitter<void>();
 
-  onCardClick() {
+  onCardClick(): void {
     if (this.isAddCard) {
       this.buttonClick.emit();
     } else {
@@ -26,9 +26,10 @@ export class CardComponent {
     }
   }
 
-  onButtonClick(event: Event) {
+  onButtonClick(event: Event): void {
     event.stopPropagation();
     this.buttonClick.emit();
   }
+
 }
 

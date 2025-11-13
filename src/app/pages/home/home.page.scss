@@ -2,6 +2,7 @@
   width: 100%;
   min-height: 100%;
   background-color: #090909;
+  overflow-x: hidden;
 }
 
 .home-header-section {
@@ -22,6 +23,7 @@
 .home-section__cards {
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
   padding-left: 40px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -38,14 +40,14 @@
 .home-section__cards app-card {
   width: 280px;
   min-width: 280px;
-}
 
-.home-section__cards app-card:first-child {
-  margin-left: 0;
-}
+  &:first-child {
+    margin-left: 0;
+  }
 
-.home-section__cards app-card:not(:first-child) {
-  margin-left: 16px;
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
 }
 
 .home-section__cards app-card:last-child {

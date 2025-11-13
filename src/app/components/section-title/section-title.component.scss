@@ -42,14 +42,14 @@
   padding: 0;
   margin-left: 10px;
   transition: opacity 0.2s ease;
-}
 
-.section-title__add-button:hover {
-  opacity: 0.8;
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-.section-title__add-button:active {
-  opacity: 0.6;
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .section-title__add-icon {
