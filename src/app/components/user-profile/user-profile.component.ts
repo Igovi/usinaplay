@@ -14,7 +14,7 @@ export class UserProfileComponent {
   @Output() buttonClick = new EventEmitter<string>();
 
   buttons = [
-    { id: 'my-body', label: 'MEU CORPO', icon: 'person' },
+    { id: 'my-body', label: 'MEU CORPO', icon: 'body' },
     { id: 'goals', label: 'OBJETIVOS E CONQUISTAS', icon: 'trophy' }
   ];
 
