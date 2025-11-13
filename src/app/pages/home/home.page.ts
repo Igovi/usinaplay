@@ -7,7 +7,19 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
+  userName: string = 'Leonardo Santos';
+  userLevel: string = 'Nível Roxo';
+  userLevelColor: string = '#6134D0';
+  userImage: string = 'assets/images/perfilImage.jpg';
 
-  constructor() {}
-
+  onActionButtonClick(buttonId: string): void {
+    switch (buttonId) {
+      case 'my-body':
+        console.log('Navegar para Meu Corpo');
+        break;
+      case 'goals':
+        console.log('Navegar para Objetivos e Conquistas');
+        break;
+    }
+  }
 }

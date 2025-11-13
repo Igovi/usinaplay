@@ -1,9 +1,25 @@
 <ion-content [fullscreen]="true">
   <div class="home-container">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <app-header></app-header>
+    <div class="home-header-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <app-header></app-header>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+                <app-user-profile
+                  [userName]="userName"
+                  [userLevel]="userLevel"
+                  [userLevelColor]="userLevelColor"
+                  [userImage]="userImage"
+                  (buttonClick)="onActionButtonClick($event)"
+                ></app-user-profile>
+          </div>
         </div>
       </div>
     </div>

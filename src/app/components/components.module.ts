@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './header/header.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   imports: [
@@ -9,10 +10,12 @@ import { HeaderComponent } from './header/header.component';
     IonicModule
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    UserProfileComponent
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    UserProfileComponent
   ]
 })
 export class ComponentsModule { }

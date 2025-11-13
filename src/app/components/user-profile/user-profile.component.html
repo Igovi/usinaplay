@@ -1,0 +1,39 @@
+<div class="user-profile">
+  <div class="user-profile__header">
+    <div class="user-profile__image-container">
+      <img 
+        *ngIf="userImage; else defaultAvatar"
+        [src]="userImage" 
+        [alt]="userName"
+        class="user-profile__image"
+      />
+      <ng-template #defaultAvatar>
+        <div class="user-profile__avatar">
+          <ion-icon name="person" class="user-profile__avatar-icon"></ion-icon>
+        </div>
+      </ng-template>
+    </div>
+    
+    <div class="user-profile__info">
+      <h2 class="user-profile__name">{{ userName }}</h2>
+      <p class="user-profile__level" [style.color]="userLevelColor">{{ userLevel }}</p>
+    </div>
+  </div>
+
+  <div class="user-profile__actions">
+    <span
+      *ngFor="let button of buttons"
+      class="user-profile__action-item"
+      (click)="onButtonClick(button.id)"
+    >
+      <div class="user-profile__action-icon-container">
+        <ion-icon 
+          [name]="button.icon" 
+          class="user-profile__action-icon"
+        ></ion-icon>
+      </div>
+      <span class="user-profile__action-label">{{ button.label }}</span>
+    </span>
+  </div>
+</div>
+
